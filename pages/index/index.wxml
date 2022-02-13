@@ -1,5 +1,10 @@
 <!--index.wxml-->
 <view class="container">
-  <text class="title">孙斌斌</text>
-  <button size="default">按钮</button>
+  <text class="title">小程序的数据绑定</text>
+  <view>我的年龄： {{age}}</view>
+  <view> {{motto}}</view>
+  <view wx:for="{{stars}}">{{item.name}}--{{item.age}}</view>
+  <view>当前计数 {{counter}}</view>
+  <!-- <button bindtap="getUserInfo">获取用户信息</button> -->
+  <button bindtap="getUserInfo">获取用户信息</button>
 </view>

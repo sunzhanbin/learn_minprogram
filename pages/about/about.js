@@ -1,3 +1,4 @@
+const app = getApp();
 // pages/about/about.js
 Page({
 
@@ -8,11 +9,16 @@ Page({
 
   },
 
+  onLaunch: function() {
+    console.log('小程序初始化完成');
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log('onLoad');
+    console.log(app);
   },
 
   /**
@@ -62,5 +68,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  getUserInfo: function(event) {
+    console.log('>>>>>>getUserInfo>>>>>>>');
+    console.log(event);
   }
 })
