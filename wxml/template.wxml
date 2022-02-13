@@ -1,0 +1,4 @@
+<template name='contentItem'>
+  <button type="primary">{{btnText}}</button>
+  <view style='text-align: center;'>{{content}}</view>
+</template>

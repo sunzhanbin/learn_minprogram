@@ -1,5 +1,10 @@
 {
   "pages": [
+    "pages/wxs/wxs",
+    "pages/scrollView/scrollView",
+    "pages/input/input",
+    "pages/image/image",
+    "pages/button/index",
     "pages/index/index",
     "pages/logs/logs"
   ],

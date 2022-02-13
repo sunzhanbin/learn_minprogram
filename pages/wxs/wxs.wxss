@@ -1,0 +1,7 @@
+.title {
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: black;
+  color: azure;
+}

@@ -1,0 +1,39 @@
+<!--pages/wxs/wxs.wxml-->
+<view class="title">wxs --> weixinScript</view>
+
+
+<!-- wxs的定义方式 -->
+<!-- 1.1 直接在wxml里面定义 -->
+<!-- <wxs module="info">
+  // wxs里面写js代码 
+  // wxs 里面只能写es5的语法
+  var msg = 'hello world';
+  var name = 'codeWhy';
+  var sum = function(num1, num2) {
+    return num1 + num2;
+  }
+
+  // commonJs的导出方式
+  module.exports = {
+    msg: msg,
+    name: name,
+    sum: sum
+  }
+</wxs> -->
+
+<!--
+  2.2 定义在单独的wxs文件中，再通过wxs标签引入
+  使用wxs导入只能使用相对路径
+-->
+
+<wxs src='../../wxs/info.wxs' module='info' />
+<view>
+  <view>{{info.msg}}</view>
+  <view>name: {{info.name}}</view>
+  <view>{{info.sum(20,30)}}</view>
+</view>
+
+<!-- 3. wxs的应用 -->
+<wxs src='../../wxs/format.wxs' module="format"></wxs>
+<view>{{format.priceFormat(price)}}</view>
+<view>{{format.dateFormat(time, 'yyyy-MM-dd hh:mm:ss')}}</view>

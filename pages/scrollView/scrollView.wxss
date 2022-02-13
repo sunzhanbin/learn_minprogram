@@ -1,0 +1,26 @@
+.container1 {
+  background-color: violet;
+  white-space: nowrap;
+}
+
+.item1 {
+  height: 200rpx;
+  width: 200rpx;
+  color: white;
+  background: red;
+  margin: 20rpx;
+  display: inline-block;
+  white-space: wrap;
+}
+
+.container2 {
+  background-color: turquoise;
+  height: 400rpx;
+  margin-top: 20rpx;
+}
+
+.item2 {
+  height: 200rpx;
+  margin: 20rpx;
+  background-color: blue;
+}

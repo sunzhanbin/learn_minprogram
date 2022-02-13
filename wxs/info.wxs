@@ -1,0 +1,14 @@
+
+{/* 在wxs里面只能写es5代码 */}
+var msg = 'hello world';
+var name = 'codeBin';
+var sum = function(num1, num2) {
+  return num1 + num2;
+}
+
+// commonJs的导入方式
+module.exports = {
+  msg: msg,
+  name: name,
+  sum: sum
+}

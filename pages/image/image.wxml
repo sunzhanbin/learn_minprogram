@@ -1,0 +1,19 @@
+<!-- 
+  1. image可以使用双标签，也可以作为单标签使用
+  2. image是有默认大小的，即使是在没有引用图片的时候
+ -->
+ <text>image标签的使用</text>
+<image mode='scaleToFill' src="/assets/images/2.jpg"></image>
+<image mode='aspectFit' src="/assets/images/2.jpg"></image>
+<image mode='aspectFill' src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic%2Fb2%2F82%2F9d%2Fb2829dcae0693926e1a3afb5f203e789.jpeg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1647314332&t=5ac57567d01c28acb48bee07ade528f0"></image>
+<image wx:if="{{albumSrc}}" src='{{albumSrc}}'></image>
+<!--
+    bindload 监听图片加载完成
+    lazy-load 图片的懒加载
+-->
+<image wx:for="{{10}}"
+       mode='widthFix'
+       bindload="handlerImageLoad"
+       lazy-load
+       src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic%2Fb2%2F82%2F9d%2Fb2829dcae0693926e1a3afb5f203e789.jpeg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1647314332&t=5ac57567d01c28acb48bee07ade528f0"></image>
+<button type="primary" bindtap="handlerChooseAlbum">选中图片</button>

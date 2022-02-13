@@ -1,0 +1,8 @@
+<input />
+<input value='yuanhuan' />
+<!-- tyoe 决定键盘的类型 -->
+<input type="idcard"/>
+<input type="number"/>
+<input type="nickname" confirm-type="next" />
+<input type="digit"/>
+<input type="safe-password"/>

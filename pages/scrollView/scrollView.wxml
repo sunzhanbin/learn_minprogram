@@ -1,0 +1,87 @@
+<!--pages/scrollView/scrollView.wxml-->
+<view>scrollView主要用来实现局部滚动</view>
+<!-- 
+  1. 水平滚动 scroll-x
+  2. 垂直滚动 scroll-y
+ -->
+
+<!-- 1. 水平滚动 scroll-x -->
+<scroll-view class="container1" scroll-x>
+  <view wx:for="{{10}}" class="item1" wx:key="index">{{item}}射雕英雄传</view>
+</scroll-view>
+
+<!-- 2. 垂直滚动 scroll-y -->
+<!-- wx:key 可以提高虚拟DOM在对比时候的性能 -->
+<scroll-view class="container2" scroll-y>
+  <view wx:for="{{10}}" class="item2" wx:key="index">{{item}}射雕英雄传</view>
+</scroll-view>
+
+<!-- <view>
+  小程序组件: https://github.com/Tencent
+</view> -->
+<!-- 
+  wx:if和hidden控制显示隐藏的区别：
+    wx:if 控制隐藏的时候，组件根本就不会创建出来
+    hidden 控制组件隐藏的时候，组件是会被创建出来的
+
+    如果组件需要经常的显示隐藏使用hidden来控制
+ -->
+<view hidden="{{true}}">我是通过hidden控制的内容</view>
+<view wx:if="{{false}}">我是通过wx:if控制的内容</view>
+
+<!-- <view>---------wx:for-----------</view> -->
+<!-- 1. wx:for的基础 -->
+<!-- 1.1 wx:for 遍历数组/字符窜、数字 -->
+
+<!-- <view wx:for="{{['李连杰', '李小龙', '成龙']}}">{{item}}--{{index}}</view>
+<view wx:for="binbin">{{item}}--{{index}}</view>
+<view wx:for="{{3}}">李连杰</view> -->
+
+<!-- 
+  1.2 block的使用
+  block只是一个标签，不会在页面上渲染出来，相当于react的Fragment标签
+  在block上使用控制属性  比在view上使用控制属性 性能更高
+ -->
+<!-- <view>------block标签------</view> -->
+<!-- <block wx:for="{{3}}">
+  <view>孙斌斌</view>
+  <view>年龄： 25</view>
+  <button>按钮</button>
+</block> -->
+
+<!-- 1.3 给item和index起名字 -->
+<!-- <view wx:for="{{movies}}"
+      wx:for-item="movie"
+      wx:for-index='i'
+      wx:key='index'>
+  {{movie}}-{{i}}
+</view> -->
+
+
+<!-- 
+  之前不支持自定义组件，为了进行代码复用就使用：template
+  模板中包含的内容在没有被使用前是不会进行任何渲染的
+ -->
+<view>-----template-------</view>
+
+<!-- <template name='contentItem'>
+  <button type="primary">{{btnText}}</button>
+  <view style='text-align: center;'>{{content}}</view>
+</template> -->
+
+<!-- 
+  注意：import和include的使用有版本问题  在搞版本中不能正常使用， 在低版本中没有问题 
+  在11.2版本开始就不能正常使用
+ -->
+ <view>
+  在wxml里面不能直接调用Page里面定义的函数
+ </view>
+<import src="../../wxml/template.wxml" />
+
+<!-- 对定义的模板进行使用 -->
+<template is='contentItem' data="{{btnText: '注册', content: '请仔细阅读法律声明'}}" />
+<template is='contentItem' data="{{btnText: '登录', content: '请输入正确的账号进行登录'}}" />
+<template is='contentItem' data="{{btnText: '购买', content: '请选择购买的商品'}}" />
+<template is='contentItem' data="{{btnText: '发货', content: '请及时关注物流信息'}}" />
+
+<include src="/wxml/footer.wxml" />

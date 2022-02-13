@@ -1,0 +1,6 @@
+<view>button的基本使用</view>
+<button size="mini">按钮</button>
+<button type='primary'>按钮</button>
+<button type='default'>按钮</button>
+<button type='warn'>按钮</button>
+<button hover-class="pressed">按钮</button>
