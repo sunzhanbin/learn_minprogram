@@ -1,0 +1,38 @@
+<!--pages/event/event.wxml-->
+<view class='title'>常见的事件</view>
+<button class="btn" size="mini" type='primary' bindtap="handlerBtnClick">按钮</button>
+<button class="btn" size="mini" type='default' bind:tap="handlerBtnClick">按钮</button>
+<button class="btn" size="mini" type='primary' catch:tap="handlerBtnClick">按钮</button>
+
+<view class='box' bind:touchstart="handlerTouchstart" bind:touchmove="handlerTouchmove" bind:touchend="handlerTouchend" bind:tap="handlerTop" bind:longpress="handlerLongpress">
+</view>
+
+<!-- 事件参数的传递 -->
+<view class="pro-container">
+  <block wx:for="{{prods}}" wx:key="index">
+    <view class="item"
+          bindtap="handlerEventClick"
+          data-index="{{index}}"
+          data-pro="{{item}}"
+          >
+      {{item}}
+    </view>
+  </block>
+</view>
+
+<!--
+   任何一个点击事件都是才从外层进行捕获 直至找到目标元素   然后开始冒泡，所以事件执行的时候先是执行捕获事件，然后再执行冒泡事件（前提是不做拦截）
+   事件捕获和事件冒泡
+   capture-bind:tap 监听事件捕获只能用这种写法
+    -bind 会一层一层传递
+    -catch 捕获  阻止事件的
+   bindtap 事件冒泡
+
+   capture-catch:tap 阻止事件捕获
+   catchtap          阻止事件冒泡
+-->
+<view class="view1" capture-bind:tap="handlerCaptureView1" bindtap='handBindViwe1'>
+  <view class="view2" capture-bind:tap="handlerCaptureView2" catchtap='handBindViwe2'>
+    <view class="view3" capture-bind:tap="handlerCaptureView3" bindtap='handBindViwe3'></view>
+  </view>
+</view>

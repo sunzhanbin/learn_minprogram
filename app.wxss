@@ -8,3 +8,15 @@
   /* padding: 200rpx 0; */
   box-sizing: border-box;
 } 
+
+.title {
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: black;
+  color: white;
+}
+
+.btn {
+  margin: 10rpx;
+}

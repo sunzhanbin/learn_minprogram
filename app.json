@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/event/event",
     "pages/wxs/wxs",
     "pages/scrollView/scrollView",
     "pages/input/input",
