@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-const app = getApp();
->>>>>>> 174d6a7e43adfa7e8e3e4f939928e24cf8e639fe
-// pages/about/about.js
+// pages/home/home.js
 Page({
 
   /**
@@ -12,44 +8,33 @@ Page({
 
   },
 
-<<<<<<< HEAD
-=======
-  onLaunch: function() {
-    console.log('小程序初始化完成');
-  },
 
->>>>>>> 174d6a7e43adfa7e8e3e4f939928e24cf8e639fe
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-<<<<<<< HEAD
-
-=======
     console.log('onLoad');
-    console.log(app);
->>>>>>> 174d6a7e43adfa7e8e3e4f939928e24cf8e639fe
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    console.log('onReady')
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log('onShow')
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    console.log('onHide')
   },
 
   /**
@@ -78,10 +63,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  getUserInfo: function(event) {
-    console.log('>>>>>>getUserInfo>>>>>>>');
-    console.log(event);
   }
 })

@@ -1,0 +1,11 @@
+<!--pages/about/about.wxml-->
+<button size="mini"
+        open-type="getUserInfo"
+        bindgetuserinfo="getUserInfo">
+  获取用户信息
+</button>
+
+<view>
+  <open-data type='userNickName'></open-data>
+  <open-data class='avatar' type='userAvatarUrl'></open-data>
+</view>
