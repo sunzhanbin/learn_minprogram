@@ -1,4 +1,12 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "首页"
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "my-cpn": "/components/my-cpn/my-cpn",
+    "my-props": "/components/my-props/my-props",
+    "my-event": "/components/my-event/my-event",
+    "tab-controller": "/components/tab-controller/tab-controller",
+    "my-select": "/components/my-select/my-select",
+    "my-slot": "/components/my-slot/my-slot",
+    "my-multi-slot": "/components/my-multi-slot/my-multi-slot"
+  }
 }

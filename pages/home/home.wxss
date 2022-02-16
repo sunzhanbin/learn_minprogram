@@ -1,1 +1,25 @@
 /* pages/home/home.wxss */
+/* pages/home/home.wxss */
+.title {
+  color: white;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  text-align: center;
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.orange {
+  background-color: orange;
+  color: white;
+}
+
+.blue {
+  background-color:blue;
+  color: white;
+}

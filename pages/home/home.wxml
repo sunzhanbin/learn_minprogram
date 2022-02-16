@@ -1,1 +1,58 @@
 <text>pages/home/home.wxml</text>
+<!-- <view class='title'>自定义组件</view> -->
+<!-- 1.自定义组件的基本使用 -->
+<!-- <my-cpn /> -->
+
+
+<!-- 2. 给自定义组件传递数据 -->
+<!-- <my-props title='销售易' header_bg='red' />
+<my-props title='中软国际科技服务有限公司' header_bg='orange' />
+<my-props title='{{companyName}}' header_bg='blue' />
+<my-props />
+<button catchtap='changeCompanyName'
+        type="primary"
+>
+  更改公司名称
+</button> -->
+
+
+<!-- 
+    <view>当前计数：{{counter}}</view>
+    组件内部发出事件
+-->
+<!--
+   这里的bind监听的是组件发射出来的时间
+   triggerEvent函数的第一个参数
+ -->
+<!-- <my-event bind:increment="handlerIncrement" /> -->
+
+<tab-controller tabs="{{tabs}}" bind:tabClick="handlerTabClick" />
+
+<!-- 直接选中组件修改数据/调用方法 -->
+<!-- <my-select id="select" />
+<button type="primary" catchtap="handlerIncrementCpn">修改组件内部数据</button> -->
+
+<!-- 插槽的使用 -->
+<!-- <my-slot>
+  <button type="primary">插槽插入的按钮</button>
+</my-slot> -->
+
+<!-- <view>--------------------</view>
+<my-slot>
+  <image mode="aspectFit" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2F4k%2Fs%2F02%2F2109242140342540-0-lp.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1647508250&t=fba1e3eba42607af4027f2e0ad340597"></image>
+</my-slot> -->
+
+<!-- 多插槽的使用 -->
+<!-- 
+  多插槽使用的注意事项：
+      1. 给每一个插槽起一个名字  name属性
+      2. 在组件的options中添加属性 multipleSlots: true, // 在组件内部使用多插槽
+ -->
+<block wx:if="{{show}}">
+  <my-multi-slot>
+    <button type="primary" slot="slot2">插槽插入的按钮</button>
+    <slider slot="slot1"></slider>
+    <text slot="slot3">射雕英雄传</text>
+  </my-multi-slot>
+</block>
+<button catchtap="handlerChangeShow" type="primary">显示/隐藏</button>

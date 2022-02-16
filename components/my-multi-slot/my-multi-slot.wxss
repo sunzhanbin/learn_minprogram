@@ -1,0 +1,7 @@
+.title {
+  background-color: black;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: white;
+}
