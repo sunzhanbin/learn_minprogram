@@ -5,12 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-<<<<<<< HEAD
-
-  },
-
-
-=======
     companyName: '华为科技服务有限公司',
     counter: 0,
     show: true,
@@ -31,49 +25,36 @@ Page({
     ]
   },
 
->>>>>>> feat: 组件化开发
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-<<<<<<< HEAD
     console.log('onLoad');
-=======
 
->>>>>>> feat: 组件化开发
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-<<<<<<< HEAD
     console.log('onReady')
-=======
 
->>>>>>> feat: 组件化开发
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-<<<<<<< HEAD
     console.log('onShow')
-=======
 
->>>>>>> feat: 组件化开发
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-<<<<<<< HEAD
     console.log('onHide')
-=======
 
->>>>>>> feat: 组件化开发
   },
 
   /**
@@ -102,8 +83,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-<<<<<<< HEAD
-=======
   },
 
   changeCompanyName() {
@@ -134,9 +113,9 @@ Page({
     mySelect.incrementNumber(10);
   },
   handlerChangeShow() {
+    console.log('>>>>>>>>>>>>>>>>>>>>')
     this.setData({
       show: !this.data.show
     })
->>>>>>> feat: 组件化开发
   }
 })
